@@ -2,14 +2,31 @@
   "name": "nextjs-reponsive",
   "version": "0.1.0",
   "private": true,
+  "author": "Khoivc",
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start"
+    "start": "npm run build && node server.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "flow": "flow"
   },
   "dependencies": {
+    "compression": "^1.7.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "next": "9.5.2",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "styled-components": "5.1.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "eslint": "^7.8.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.6",
+    "flow-bin": "^0.132.0",
+    "prettier": "^2.1.1"
   }
 }
