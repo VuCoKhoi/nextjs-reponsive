@@ -11,6 +11,17 @@
     "lint:fix": "eslint --fix .",
     "flow": "flow"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*": [
+      "npm run lint:fix",
+      "git add"
+    ]
+  },
   "dependencies": {
     "compression": "^1.7.4",
     "dotenv": "^8.2.0",
@@ -24,9 +35,12 @@
     "babel-eslint": "^10.1.0",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "eslint": "^7.8.0",
+    "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.6",
     "flow-bin": "^0.132.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.3.0",
     "prettier": "^2.1.1"
   }
 }
